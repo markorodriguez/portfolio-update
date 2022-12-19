@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const NavBar = () => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
+  const [burgerOpen, setBurgerOpen] = useState(!false);
   return (
     <>
       <AnimatePresence>
@@ -88,8 +88,25 @@ const NavBar = () => {
 const SideBar = () => {
 
   return (
-    <div  className="absolute top-0 h-screen w-full z-10">
-      <motion.div initial={{display: 'none'}} animate={{position: 'absolute', right: '0'}} className={`w-5/12 h-full shadow-lg bg-secondary `}></motion.div>
+    <div className="absolute overflow-hidden top-0 flex flex-row-reverse h-screen w-full z-10">
+      <motion.div
+        initial={{
+          position: 'absolute',
+          x: '100%',
+          opacity: 0
+        }}
+        animate={{
+          position: 'absolute',
+          overflow: 'hidden',
+          x: '0',
+          opacity: 1
+        }}
+        exit={{
+          position: 'absolute',
+          x: '100%',
+          opacity: 1
+        }}
+        className={`w-5/12 h-full shadow-lg bg-secondary `}></motion.div>
     </div>
   )
 };
