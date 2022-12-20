@@ -2,13 +2,20 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const NavBar = () => {
-  const [burgerOpen, setBurgerOpen] = useState(!false);
+  const [burgerOpen, setBurgerOpen] = useState(false);
+  
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      setBurgerOpen(false);
+    }
+  })
+
   return (
     <>
       <AnimatePresence>
         {burgerOpen && <SideBar />}
       </AnimatePresence>
-      <nav className="md:container w-11/12 mx-auto py-4 text-white text-sm flex justify-between md:items-center">
+      <nav className="md:container px-6 w-11/12 mx-auto py-4 text-white text-sm flex justify-between md:items-center">
         <motion.span
           initial={{ y: -10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.2 }}
