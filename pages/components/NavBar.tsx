@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const NavBar = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
-  
+
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       setBurgerOpen(false);
@@ -15,7 +15,7 @@ const NavBar = () => {
       <AnimatePresence>
         {burgerOpen && <SideBar />}
       </AnimatePresence>
-      <nav className="md:container px-6 w-11/12 mx-auto py-4 text-white text-sm flex justify-between md:items-center">
+      <nav className="md:container px-4 w-11/12 mx-auto py-4 text-white text-sm flex justify-between md:items-center">
         <motion.span
           initial={{ y: -10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.2 }}
@@ -113,7 +113,51 @@ const SideBar = () => {
           x: '100%',
           opacity: 1
         }}
-        className={`w-5/12 h-full shadow-lg bg-secondary `}></motion.div>
+        className={`w-6/12 h-full shadow-lg bg-secondary `}>
+        <div className="relative flex flex-col py-4 justify-center text-center gap-10 items-center mx-auto h-full">
+          <motion.a
+            initial={{ opacity: 1 }}
+            transition={{ duration: 1.85, type: "spring", delay: 0.25 }}
+            animate={{ x: 0, opacity: 1 }}
+            className=" hover:text-light hover:cursor-pointer transition-all"
+          >
+            <span className="text-light font-semibold block "> 01. </span> About
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 1 }}
+            transition={{ duration: 1.85, type: "spring", delay: 0.30 }}
+            animate={{ x: 0, opacity: 1 }}
+            className=" hover:text-light hover:cursor-pointer transition-all"
+          >
+            <span className="text-light font-semibold block "> 02. </span>{" "}
+            Experience
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 1 }}
+            transition={{ duration: 1.85, type: "spring", delay: 0.35 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="  hover:text-light hover:cursor-pointer transition-all"
+          >
+            <span className="text-light font-semibold block "> 03. </span> Work
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 1 }}
+            transition={{ duration: 1.85, type: "spring", delay: 0.40 }}
+            animate={{ x: 0, opacity: 1 }}
+            className=" hover:text-light hover:cursor-pointer transition-all"
+          >
+            <span className=" text-light font-semibold block "> 04. </span> Contact
+          </motion.a>
+          <motion.button
+            initial={{ opacity: 1 }}
+            transition={{ duration: 1.85, type: "spring", delay: 0.45 }}
+            animate={{ x: 0, opacity: 1 }}
+            className=" border-light text-light border-2 py-2 px-4 rounded-md hover:text-c-white hover:bg-light transition-all"
+          >
+            Resume
+          </motion.button>
+        </div>
+      </motion.div>
     </div>
   )
 };
