@@ -15,14 +15,14 @@ const NavBar = () => {
       <AnimatePresence>
         {burgerOpen && <SideBar />}
       </AnimatePresence>
-      <nav className="md:container px-4 w-11/12 mx-auto py-4 text-white text-sm flex justify-between md:items-center">
+      <nav className="md:container px-4 w-11/12 mx-auto py-4 font-semibold text-white text-sm flex justify-between md:items-center">
         <motion.span
           initial={{ y: -10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.2 }}
           animate={{ y: 0, opacity: 1 }}
-          className="h-full cursor-pointer"
+          className="cursor-pointer -my-3 md:my-0 underline underline-offset-8 text-2xl decoration-4 text-light"
         >
-          Logo
+          M
         </motion.span>
         <motion.div
           className="md:hidden z-30"
@@ -95,7 +95,7 @@ const NavBar = () => {
 const SideBar = () => {
 
   return (
-    <div className="absolute overflow-hidden top-0 flex flex-row-reverse h-screen w-full z-10">
+    <div className="absolute overflow-hidden top-0 text-c-white flex flex-row-reverse h-screen w-full z-10">
       <motion.div
         initial={{
           position: 'absolute',
