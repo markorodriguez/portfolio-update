@@ -3,6 +3,7 @@ import Loader from './components/Loader/Loader'
 import { useState } from 'react'
 import Layout from './components/Layout'
 import NavBar from './components/NavBar'
+import Hero from './components/Hero'
 
 export default function Home() {
   const [isLoading, setLoading] = useState(true)
@@ -18,6 +19,7 @@ export default function Home() {
         <Loader changeAfterAnimation={changeAfterAnimation}/>
         : <Layout>
             <NavBar />
+            <Hero />
         </Layout>}
     </>
   )

@@ -114,7 +114,7 @@ const SideBar = () => {
           opacity: 1
         }}
         className={`w-6/12 h-full shadow-lg bg-secondary `}>
-        <div className="relative flex flex-col py-4 justify-center text-center gap-10 items-center mx-auto h-full">
+        <div className="relative font-semibold flex flex-col py-4 justify-center text-center gap-10 items-center mx-auto h-full">
           <motion.a
             initial={{ opacity: 1 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.25 }}
