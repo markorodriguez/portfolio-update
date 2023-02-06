@@ -26,7 +26,7 @@ const expData = [
       "Unit testing execution using Jest",
       "Frontend development using React.JS",
       "Consumption of services from AWS, AZURE, IBM, and GCP using Python",
-      "API documentation using OpenAPI 3.0 (Swagger)"
+      "API documentation using OpenAPI 3.0 (Swagger)",
     ],
   },
   {
@@ -104,13 +104,13 @@ const Experience = () => {
                     <h2 className="text-lg">{exp.position}</h2>
                     <p className="text-sm text-gray-400">{exp.period}</p>
                     <div className="my-4">
-                    {exp.activities.map((activity, index) => {
-                      return (
-                        <p key={index} className="text-sm my-2">
-                          <span className="text-light">▹</span> {activity}
-                        </p>
-                      );
-                    })}
+                      {exp.activities.map((activity, index) => {
+                        return (
+                          <p key={index} className="text-sm my-2">
+                            <span className="text-light">▹</span> {activity}
+                          </p>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -119,10 +119,14 @@ const Experience = () => {
           </Tab.Panels>
         </Tab.Group>
       </motion.div>
-    
-      <div className="flex flex-row justify-between md:container w-11/12 mx-auto">
-        <h3>frontend</h3>
-        <h3>backend</h3>
+
+      <div className="flex flex-row md:w-7/12 justify-between md:container w-11/12 mx-auto max-w-screen-sm">
+        <div>
+          <h2 className="text-2xl text-gray-300 underline underline-offset-8 decoration-light decoration-4">Frontend</h2>
+        </div>
+        <div>
+          <h2 className="text-2xl text-gray-300 underline underline-offset-8 decoration-light decoration-4">Backend</h2>
+        </div>
       </div>
     </div>
   );
