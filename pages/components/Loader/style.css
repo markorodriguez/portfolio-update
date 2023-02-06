@@ -18,7 +18,7 @@
   position: absolute;
   inset: -15px;
   margin: auto;
-  background: #F05454; 
+  background: #00ADB5; 
   animation: diamondLoader 1.5s linear;
 }
 @keyframes diamondLoader {

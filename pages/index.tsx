@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Layout from './components/Layout'
 import NavBar from './components/NavBar'
 import Hero from './components/Hero'
+import Experience from './components/Experience/Experience'
 
 export default function Home() {
   const [isLoading, setLoading] = useState(true)
@@ -20,6 +21,7 @@ export default function Home() {
         : <Layout>
             <NavBar />
             <Hero />
+            <Experience/>
         </Layout>}
     </>
   )

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +12,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.unica-font {
+  font-family: 'Unica One', cursive;
+}
+
+.mont-font {
+  font-family: 'Montserrat', sans-serif;
 }
 
 #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
@@ -30,7 +50,7 @@
   position: absolute;
   height: 3px;
   width: 60%;
-  background: #F05454;
+  background: #00ADB5;
   border-radius: 9px;
   opacity: 1;
   right: 0;
@@ -80,4 +100,38 @@
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+.scroll-down {
+  display: block;
+  width: 40px;
+  height: 78px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  position: relative;
+  border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
+}
+
+.scroll-down::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50% , 50%);
+  width: 10px;
+  height: 10px;
+  background: #FFF;
+  border-radius: 50%;
+  animation: fadeDown 1s ease-out infinite;
+}
+
+@keyframes fadeDown {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+  100% {
+    top: 60%;
+    opacity: 0;
+  }
 }

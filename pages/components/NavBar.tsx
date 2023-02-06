@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 const NavBar = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
@@ -15,7 +16,7 @@ const NavBar = () => {
       <AnimatePresence>
         {burgerOpen && <SideBar />}
       </AnimatePresence>
-      <nav className="md:container px-4 w-11/12 mx-auto py-4 font-semibold text-white text-sm flex justify-between md:items-center">
+      <nav className="md:container z-40 mont-font   fixed left-1/2 -translate-x-1/2 px-4 w-11/12 mx-auto py-4 font-medium text-white text-sm flex justify-between md:items-center">
         <motion.span
           initial={{ y: -10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.2 }}
@@ -45,6 +46,7 @@ const NavBar = () => {
         </motion.div>
         <div className="md:flex h-full md:items-center hidden">
           <motion.a
+            href="/#about"
             initial={{ opacity: 0 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.25 }}
             animate={{ y: 0, opacity: 1 }}
@@ -53,6 +55,7 @@ const NavBar = () => {
             <span className="text-light font-semibold mx-2"> 01. </span> About
           </motion.a>
           <motion.a
+            href="/#experience"
             initial={{ opacity: 0 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.30 }}
             animate={{ y: 0, opacity: 1 }}
@@ -81,7 +84,7 @@ const NavBar = () => {
             initial={{ opacity: 0 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.45 }}
             animate={{ y: 0, opacity: 1 }}
-            className="ml-4 border-light text-light border-2 py-2 px-4 rounded-md hover:text-c-white hover:bg-light transition-all"
+            className="ml-4 border-light text-light border-2 py-2 px-4 rounded-md hover:text-gray-300 hover:bg-light transition-all"
           >
             Resume
           </motion.button>
@@ -95,7 +98,7 @@ const NavBar = () => {
 const SideBar = () => {
 
   return (
-    <div className="absolute overflow-hidden top-0 text-c-white flex flex-row-reverse h-screen w-full z-10">
+    <div className="fixed overflow-hidden top-0 text-gray-300 flex flex-row-reverse h-screen w-full z-10">
       <motion.div
         initial={{
           position: 'absolute',
@@ -114,8 +117,9 @@ const SideBar = () => {
           opacity: 1
         }}
         className={`w-6/12 h-full shadow-lg bg-secondary `}>
-        <div className="relative font-semibold flex flex-col py-4 justify-center text-center gap-10 items-center mx-auto h-full">
+        <div className="relative  font-semibold flex flex-col py-4 justify-center text-center gap-10 items-center mx-auto h-full">
           <motion.a
+            href="/#about"
             initial={{ opacity: 1 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.25 }}
             animate={{ x: 0, opacity: 1 }}
@@ -124,6 +128,7 @@ const SideBar = () => {
             <span className="text-light font-semibold block "> 01. </span> About
           </motion.a>
           <motion.a
+            href="/#experience"
             initial={{ opacity: 1 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.30 }}
             animate={{ x: 0, opacity: 1 }}
@@ -152,7 +157,7 @@ const SideBar = () => {
             initial={{ opacity: 1 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.45 }}
             animate={{ x: 0, opacity: 1 }}
-            className=" border-light text-light border-2 py-2 px-4 rounded-md hover:text-c-white hover:bg-light transition-all"
+            className=" border-light text-light border-2 py-2 px-4 rounded-md hover:text-gray-300 hover:bg-light transition-all"
           >
             Resume
           </motion.button>
