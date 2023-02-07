@@ -19,7 +19,7 @@ const expData = [
   {
     title: "Weather App",
     tools: ["Next.js", "Tailwind", "Google Images API", "OpenWeather API"],
-    github: "",
+    github: "https://github.com/markorodriguez/weather-app",
     deployed: "https://weather-app-five-self.vercel.app/",
   },
   {
