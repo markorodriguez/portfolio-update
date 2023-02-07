@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Tab } from "@headlessui/react";
-import { FaHospital, FaSms } from "react-icons/fa";
+import { FaHospital, FaNodeJs, FaSms } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Frontend from "./Frontend";
@@ -35,7 +35,6 @@ const expData = [
 		],
 	},
 ];
-
 
 
 const variants = {
@@ -96,7 +95,7 @@ const Experience = () => {
 					<Tab.Panels className="mt-10 ">
 						{expData.map((exp, index) => (
 							<Tab.Panel key={index} className="px-4 py-2 text-gray-300">
-								<div className="bg-secondary rounded-lg shadow-lg p-4">
+								<div className="bg-secondary rounded-lg h-auto shadow-lg p-4">
 									<div className="flex flex-col px-4 text-left">
 										<h2 className="text-lg">{exp.position}</h2>
 										<p className="text-sm text-gray-400">{exp.period}</p>
