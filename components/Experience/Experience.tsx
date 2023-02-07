@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Tab } from "@headlessui/react";
-import { FaHospital, FaSms } from "react-icons/fa";
+import { FaHospital, FaNodeJs, FaSms } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -10,15 +10,6 @@ const expData = [
 		place: "Lima, Peru",
 		position: "Backend Developer Jr",
 		period: "September 2022 - Now",
-		tools: [
-			"Node.js",
-			"AWS",
-			"DynamoDB",
-			"Jest",
-			"React",
-			"Python",
-			"PostgreSQL",
-		],
 		image: <FaSms className="mx-4" />,
 		activities: [
 			"Development utilizing API Gateway and AWS Lambda (Node.js)",
@@ -43,6 +34,33 @@ const expData = [
 		],
 	},
 ];
+
+const carousel = [
+	{
+		tool: 'Node.js',
+		png_url : 'https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png'
+	},
+	{
+		tool: 'Express.js',
+		png_url : 'https://cdn.iconscout.com/icon/free/png-256/express-283245.png'
+	},
+	{
+		tool: 'React.js',
+		png_url : 'https://cdn.iconscout.com/icon/free/png-256/react-1-282599.png'
+	},
+	{
+		tool: 'Next.js',
+		png_url : 'https://cdn.iconscout.com/icon/free/png-256/next-js-3-1175109.png'
+	},
+	{
+		tool: 'Tailwind CSS',
+		png_url : 'https://cdn.iconscout.com/icon/free/png-256/tailwindcss-226083.png'
+	},
+	{
+		tool: 'MongoDB',
+		png_url : 'https://cdn.iconscout.com/icon/free/png-256/mongodb-5-1175140.png'
+	}
+]
 
 const variants = {
 	hidden: { opacity: 0, y: -10 },
@@ -98,7 +116,7 @@ const Experience = () => {
 					<Tab.Panels className="mt-10 ">
 						{expData.map((exp, index) => (
 							<Tab.Panel key={index} className="px-4 py-2 text-gray-300">
-								<div className="bg-secondary rounded-lg shadow-lg p-4">
+								<div className="bg-secondary rounded-lg h-auto shadow-lg p-4">
 									<div className="flex flex-col px-4 text-left">
 										<h2 className="text-lg">{exp.position}</h2>
 										<p className="text-sm text-gray-400">{exp.period}</p>
@@ -120,12 +138,20 @@ const Experience = () => {
 			</motion.div>
 
 			<div className="flex flex-row md:w-7/12 justify-between md:container w-11/12 mx-auto max-w-screen-sm">
-				<div>
-					<h2 className="text-2xl text-gray-300 underline underline-offset-8 decoration-light decoration-4">Frontend</h2>
-				</div>
-				<div>
-					<h2 className="text-2xl text-gray-300 underline underline-offset-8 decoration-light decoration-4">Backend</h2>
-				</div>
+				{/* make a carousel */}
+				{carousel.map((tool, index) => {
+					return (
+						<div key={index} className="flex flex-col items-center">
+							<img
+								src={tool.png_url}
+								alt={tool.tool}
+								className="h-16 w-16 rounded-full object-cover"
+							/>
+							<p className="text-gray-300 text-sm">{tool.tool}</p>
+						</div>
+					);
+				})}
+				
 			</div>
 		</div>
 	);
