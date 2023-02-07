@@ -3,6 +3,8 @@ import { Tab } from "@headlessui/react";
 import { FaHospital, FaSms } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Frontend from "./Frontend";
+import Backend from "./Backend";
 
 const expData = [
 	{
@@ -10,15 +12,6 @@ const expData = [
 		place: "Lima, Peru",
 		position: "Backend Developer Jr",
 		period: "September 2022 - Now",
-		tools: [
-			"Node.js",
-			"AWS",
-			"DynamoDB",
-			"Jest",
-			"React",
-			"Python",
-			"PostgreSQL",
-		],
 		image: <FaSms className="mx-4" />,
 		activities: [
 			"Development utilizing API Gateway and AWS Lambda (Node.js)",
@@ -34,7 +27,6 @@ const expData = [
 		place: "Lima, Peru",
 		position: "Intern Developer",
 		period: "March 2022 - June 2022",
-		tools: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "SQL"],
 		image: <FaHospital className="mx-4" />,
 		activities: [
 			"Familiar with REST API development using Node.JS and Express.",
@@ -44,12 +36,15 @@ const expData = [
 	},
 ];
 
+
+
 const variants = {
 	hidden: { opacity: 0, y: -10 },
 	visible: { opacity: 1, y: 0, transition: { duration: 1.5, type: "spring" } },
 };
 
 const Experience = () => {
+	// Experience
 	const controls = useAnimation();
 	const { ref, inView } = useInView();
 
@@ -59,9 +54,12 @@ const Experience = () => {
 		}
 	}, [controls, inView]);
 
+	
+
+
 	return (
 		<div
-			className="md:container text-center h-screen py-24 mx-auto w-11/12"
+			className="md:container  min-h-screen text-center py-24 mx-auto w-11/12"
 			id="experience"
 		>
 			<motion.h2
@@ -119,13 +117,9 @@ const Experience = () => {
 				</Tab.Group>
 			</motion.div>
 
-			<div className="flex flex-row md:w-7/12 justify-between md:container w-11/12 mx-auto max-w-screen-sm">
-				<div>
-					<h2 className="text-2xl text-gray-300 underline underline-offset-8 decoration-light decoration-4">Frontend</h2>
-				</div>
-				<div>
-					<h2 className="text-2xl text-gray-300 underline underline-offset-8 decoration-light decoration-4">Backend</h2>
-				</div>
+			<div className="flex flex-col md:w-full justify-around md:container w-11/12 mx-auto max-w-screen-sm">
+				<Frontend />
+				<Backend/>
 			</div>
 		</div>
 	);

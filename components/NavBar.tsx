@@ -74,6 +74,7 @@ const NavBar = () => {
               Experience
             </motion.a>
             <motion.a
+              href="/#work"
               initial={{ opacity: 0 }}
               transition={{ duration: 1.85, type: "spring", delay: 0.35 }}
               animate={{ y: 0, opacity: 1 }}
@@ -149,6 +150,7 @@ const SideBar = () => {
             Experience
           </motion.a>
           <motion.a
+            href="/#work"
             initial={{ opacity: 1 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.35 }}
             animate={{ x: 0, opacity: 1 }}
@@ -157,6 +159,7 @@ const SideBar = () => {
             <span className="text-light font-semibold block "> 03. </span> Work
           </motion.a>
           <motion.a
+            href="/#contact"
             initial={{ opacity: 1 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.40 }}
             animate={{ x: 0, opacity: 1 }}

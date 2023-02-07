@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import NavBar from '../components/NavBar'
 import Hero from '../components/Hero'
 import Experience from '../components/Experience/Experience'
+import Work from '../components/Work/Work'
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
           <NavBar />
           <Hero />
           <Experience />
+          <Work />
         </Layout>}
     </>
   )
