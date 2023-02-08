@@ -18,6 +18,8 @@ export default function Home() {
     <>
       <Head>
         <title>Marko | Portfolio</title>
+        <meta name="description" content="Marko's portfolio" />
+        <meta name="theme-color" content="#222831" />
       </Head>
       {isLoading ?
         <Loader changeAfterAnimation={changeAfterAnimation} />

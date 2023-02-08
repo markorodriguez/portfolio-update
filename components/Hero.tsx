@@ -18,7 +18,7 @@ const Hero = () => {
           initial={{ y: -10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.5 }}
           animate={{ y: 0, opacity: 1 }}
-          className="text-5xl md:text-7xl my-14 text-light underline underline-offset-[1rem] decoration-gray-300 unica-font"
+          className="text-5xl md:text-7xl mb-14 my-4 text-light underline underline-offset-[1rem] decoration-gray-300 unica-font"
         >
           MARKO.
         </motion.h1>
