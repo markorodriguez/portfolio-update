@@ -33,34 +33,7 @@ const expData = [
 			"Hands-on experience with backend and frontend implementation.",
 			"Understanding of database creation using SQL.",
 		],
-	},
-	{
-		company: "Mowa Consultora",
-		place: "Lima, Peru",
-		position: "Backend Developer Jr",
-		period: "September 2022 - Now",
-		image: <FaSms className="mx-4" />,
-		activities: [
-			"Development utilizing API Gateway and AWS Lambda (Node.js)",
-			"Script and query development for DynamoDB",
-			"Unit testing execution using Jest",
-			"Frontend development using React.JS",
-			"Consumption of services from AWS, AZURE, IBM, and GCP using Python",
-			"API documentation using OpenAPI 3.0 (Swagger)",
-		],
-	},
-	{
-		company: "Clinica San Andrés",
-		place: "Lima, Peru",
-		position: "Intern Developer",
-		period: "March 2022 - June 2022",
-		image: <FaHospital className="mx-4" />,
-		activities: [
-			"Familiar with REST API development using Node.JS and Express.",
-			"Hands-on experience with backend and frontend implementation.",
-			"Understanding of database creation using SQL.",
-		],
-	},
+	}
 ];
 
 
