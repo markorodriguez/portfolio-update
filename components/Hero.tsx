@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="min-h-screen h-full bg-primary" id="about" >
-      <div className="md:container text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center mx-auto w-11/12">
+      <div className="md:container  text-center absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center mx-auto w-11/12">
         <motion.h2
           initial={{ y: -10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.45 }}
@@ -26,7 +26,7 @@ const Hero = () => {
           initial={{ y: 10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.55 }}
           animate={{ y: 0, opacity: 1 }}
-          className="md:w-5/12 w-10/12 text-base text-justify md:text-center  text-gray-300"
+          className="md:w-5/12 w-10/12 text-base md:text-lg text-justify md:text-center  text-gray-300"
         >
           I'm a{" "}
           <span className="text-light font-semibold">junior web developer</span>{" "}
@@ -40,7 +40,7 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          className="relative my-40"
+          className="relative my-28 md:my-40"
           initial={{ y: 10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.6 }}
           animate={{ y: 0, opacity: 1 }}
@@ -48,7 +48,7 @@ const Hero = () => {
           <Blob />
         </motion.div>
       </div>
-      <div className="md:container mx-auto left-1/2 -translate-x-1/2 absolute bottom-10 w-full">
+      <div className="md:container mx-auto left-1/2 -translate-x-1/2 absolute bottom-6 w-full">
         <motion.span initial={{ y: 0, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.65 }}
           animate={{ y: 0, opacity: 1 }} className="scroll-down mx-auto"></motion.span>

@@ -34,6 +34,33 @@ const expData = [
 			"Understanding of database creation using SQL.",
 		],
 	},
+	{
+		company: "Mowa Consultora",
+		place: "Lima, Peru",
+		position: "Backend Developer Jr",
+		period: "September 2022 - Now",
+		image: <FaSms className="mx-4" />,
+		activities: [
+			"Development utilizing API Gateway and AWS Lambda (Node.js)",
+			"Script and query development for DynamoDB",
+			"Unit testing execution using Jest",
+			"Frontend development using React.JS",
+			"Consumption of services from AWS, AZURE, IBM, and GCP using Python",
+			"API documentation using OpenAPI 3.0 (Swagger)",
+		],
+	},
+	{
+		company: "Clinica San Andrés",
+		place: "Lima, Peru",
+		position: "Intern Developer",
+		period: "March 2022 - June 2022",
+		image: <FaHospital className="mx-4" />,
+		activities: [
+			"Familiar with REST API development using Node.JS and Express.",
+			"Hands-on experience with backend and frontend implementation.",
+			"Understanding of database creation using SQL.",
+		],
+	},
 ];
 
 
@@ -76,16 +103,16 @@ const Experience = () => {
 				animate={controls}
 				variants={variants}
 				initial="hidden"
-				className="w-auto mx-auto max-w-screen-sm px-2 py-16 sm:px-0"
+				className=" mx-auto max-w-xl px-2 py-16 sm:px-0"
 			>
 				<Tab.Group>
-					<Tab.List className="flex p-1 space-x-1 bg-light bg-opacity-10 rounded-lg">
+					<Tab.List className="flex mx-auto justify-center overflow-x-scroll md:overflow-x-visible rounded-lg">
 						{expData.map((exp, index) => (
 							<Tab
 								key={index}
 								className={({ selected }) =>
-									`${selected ? "bg-light text-white " : "text-gray-300 "
-									} relative flex-1 flex justify-center items-center py-2.5 text-sm font-medium rounded-lg cursor-pointer focus:outline-none`
+									`${selected ? "border-t-2  border-light bg-light bg-opacity-10 text-white " : "text-gray-300 "
+									} relative px-4 shrink-0 flex justify-center bg-light bg-opacity-10 items-center py-4 text-sm font-medium  cursor-pointer focus:outline-none`
 								}
 							>
 								{exp.image} {exp.company}
