@@ -19,12 +19,16 @@ const NavBar = () => {
     })
   }, [])
 
+  const handleClickOutside = () => {
+    setBurgerOpen(false);
+  }
+
   return (
     <>
       <AnimatePresence>
-        {burgerOpen && <SideBar />}
+        {burgerOpen && <SideBar onClose={handleClickOutside} />}
       </AnimatePresence>
-        <div className={`w-screen fixed z-10 h-20 transition-all ${scroll ? 'bg-primary' : 'bg-transparent'} `}>
+      <div className={`w-screen fixed z-10 h-20 transition-all ${scroll ? 'bg-primary' : 'bg-transparent'} `}>
         <nav className={`md:container  mont-font  px-4 w-11/12 mx-auto py-4 font-medium text-white text-sm flex justify-between md:items-center `}>
           <motion.span
             initial={{ y: -10, opacity: 0 }}
@@ -83,6 +87,7 @@ const NavBar = () => {
               <span className="text-light font-semibold mx-2"> 03. </span> Work
             </motion.a>
             <motion.a
+              href="/#contact"
               initial={{ opacity: 0 }}
               transition={{ duration: 1.85, type: "spring", delay: 0.40 }}
               animate={{ y: 0, opacity: 1 }}
@@ -107,11 +112,34 @@ const NavBar = () => {
   );
 };
 
-const SideBar = () => {
+
+interface ISideBar {
+  onClose: () => void;
+}
+
+const SideBar = ({ onClose }: ISideBar) => {
 
   return (
-    <div className="fixed overflow-hidden top-0 z-10 text-gray-300 flex flex-row-reverse h-screen w-full">
+    <div className="fixed overflow-hidden top-0 z-20 text-gray-300 flex flex-row-reverse h-screen w-screen bg-opacity-25">
+      <motion.div onClick={() => {
+        onClose()
+      }} initial={{
+        position: 'absolute',
+        x: '200%',
+      }}
+        animate={{
+          position: 'absolute',
+          overflow: 'hidden',
+          x: '0',
+        }}
+        exit={{
+          position: 'absolute',
+          x: '200%',
+        }} className="absolute left-0 h-screen w-6/12 bg-opacity-10  bg-primary backdrop-blur-sm">
+
+      </motion.div>
       <motion.div
+
         initial={{
           position: 'absolute',
           x: '100%',

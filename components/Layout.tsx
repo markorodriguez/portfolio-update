@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const Layout = ({ children }: any) => {
   return (
-    <div className='w-full min-h-screen bg-primary'>
+    <div className='w-full h-auto bg-primary'>
       {children}
       {/* <VerticalLinks /> */}
     </div>
