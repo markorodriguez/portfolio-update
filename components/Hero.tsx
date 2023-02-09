@@ -40,7 +40,7 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          className="relative my-28 md:my-40"
+          className="relative md:block my-28 md:my-40"
           initial={{ y: 10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.6 }}
           animate={{ y: 0, opacity: 1 }}
