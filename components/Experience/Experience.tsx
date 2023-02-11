@@ -54,8 +54,6 @@ const Experience = () => {
 	}, [controls, inView]);
 
 	
-
-
 	return (
 		<div
 			className="md:container  min-h-screen text-center py-24 mx-auto w-11/12"
