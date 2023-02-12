@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const backendTools = [
     {
         tool: "Node.JS",
-        svg_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+        svg_url: "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png",
     },
     {
         tool: "Express.JS",

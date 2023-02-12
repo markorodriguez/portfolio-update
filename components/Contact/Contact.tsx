@@ -23,10 +23,16 @@ const Contact = () => {
 
     return (
         <div
-            className="md:container   text-center pt-12 mx-auto w-11/12"
+            className="md:container min-h-screen text-center flex flex-col items-center justify-center mx-auto w-11/12"
             id="contact"
         >
-
+            <motion.h2 ref={ref}
+                animate={controls}
+                variants={variants}
+                initial="hidden"
+                className="text-2xl text-gray-300 underline underline-offset-8 decoration-light decoration-4">
+                Contact
+            </motion.h2>
             <motion.div ref={ref}
                 animate={controls}
                 variants={variants}
@@ -34,6 +40,10 @@ const Contact = () => {
                 {/** Contact cards for linkedin github mail and discord */}
                 <footer className="text-center pb-10 text-white">
                     <div className="container px-6 pt-6">
+                        <p className='md:w-6/12 w-10/12 text-justify mx-auto my-10'>Although I’m not currently looking for any new opportunities, <span className='text-light'>my inbox is always open</span>. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+                        <br /> <span className='text-light'> Say Hello</span></p>
+                        
+
                         <div className="flex justify-center">
 
                             <Link href="mailto:markorodriguez@hotmail.es" type="button" className="rounded-full border-2 border-white hover:text-light hover:border-light  text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">

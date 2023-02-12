@@ -66,7 +66,7 @@ const Work = () => {
         Work
       </motion.h2>
 
-      <div className="grid md:grid-cols-3 md:container w-11/12 mx-auto gap-10 mt-14">
+      <div className="grid md:grid-cols-2 grid-cols-1 md:w-11/12 w-8/12 mx-auto gap-10 mt-14">
         {expData.map(({title, tools, github, deployed}, index) => (
           <WorkCard title={title} github={github} deployed={deployed} key={index} tools={tools} />
         ))}

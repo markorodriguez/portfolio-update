@@ -35,7 +35,7 @@ const WorkCard = ({title, tools, github, deployed}:IWorkCard) => {
     animate={controls}
     variants={variants}
     initial="hidden" 
-    className='bg-secondary flex flex-col justify-around rounded-lg shadow-lg py-6'>
+    className='bg-secondary md:w-10/12 w-full mx-auto flex flex-col justify-around rounded-lg shadow-lg py-6'>
       <span className='font-semibold text-lg text-gray-300'>{title}</span>
       <div className='flex mt-4 flex-wrap justify-center'>
         {tools.map((tool, idx) => (

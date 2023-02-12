@@ -96,11 +96,12 @@ const NavBar = () => {
               <span className="text-light font-semibold mx-2"> 04. </span> Contact
             </motion.a>
             <motion.a
-              href="/api/resume"
+              download="Marko_Rodriguez-CV.pdf"
+              href="/documents/Marko_Rodriguez-CV.pdf"
               initial={{ opacity: 0 }}
               transition={{ duration: 1.85, type: "spring", delay: 0.45 }}
               animate={{ y: 0, opacity: 1 }}
-              className="ml-4 border-light text-light border-2 py-2 px-4 rounded-md hover:text-gray-300 hover:bg-light transition-all"
+              className="ml-4 hover:cursor-pointer border-light text-light border-2 py-2 px-4 rounded-md hover:text-gray-300 hover:bg-light transition-all"
             >
               Resume
             </motion.a>
@@ -197,7 +198,8 @@ const SideBar = ({ onClose }: ISideBar) => {
             <span className=" text-light font-semibold block "> 04. </span> Contact
           </motion.a>
           <motion.a
-            href="/api/resume"
+            download="Marko_Rodriguez-CV.pdf"
+            href="/documents/Marko_Rodriguez-CV.pdf"
             initial={{ opacity: 1 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.45 }}
             animate={{ x: 0, opacity: 1 }}
