@@ -13,8 +13,8 @@ interface IWorkCard {
 }
 
 const variants = {
-	hidden: { opacity: 0, y: -10 },
-	visible: { opacity: 1, y: 0, transition: { duration: 1.5, type: "spring" } },
+	hidden: { opacity: 0 },
+	visible: { opacity: 1, transition: { duration: 1.5, type: "spring" } },
 };
 
 
@@ -35,7 +35,7 @@ const WorkCard = ({title, tools, github, deployed}:IWorkCard) => {
     animate={controls}
     variants={variants}
     initial="hidden" 
-    className='bg-secondary md:w-10/12 w-full mx-auto flex flex-col justify-around rounded-lg shadow-lg py-6'>
+    className='bg-secondary  h-full w-full mx-auto flex flex-col justify-around rounded-lg shadow-lg py-6'>
       <span className='font-semibold text-lg text-gray-300'>{title}</span>
       <div className='flex mt-4 flex-wrap justify-center'>
         {tools.map((tool, idx) => (

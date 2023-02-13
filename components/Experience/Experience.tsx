@@ -6,6 +6,14 @@ import { useInView } from "react-intersection-observer";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
 
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+
+
 const expData = [
 	{
 		company: "Mowa Consultora",
@@ -53,7 +61,7 @@ const Experience = () => {
 		}
 	}, [controls, inView]);
 
-	
+
 	return (
 		<div
 			className="md:container  min-h-screen text-center py-24 mx-auto w-11/12"
@@ -74,9 +82,12 @@ const Experience = () => {
 				animate={controls}
 				variants={variants}
 				initial="hidden"
-				className=" mx-auto max-w-xl px-2 py-16 sm:px-0"
+				className=" mx-auto px-2 py-16 sm:px-0"
 			>
-				<Tab.Group>
+				{
+					/**
+					 * 
+					 * <Tab.Group>
 					<Tab.List className="flex mx-auto justify-center overflow-x-scroll md:overflow-x-visible rounded-lg">
 						{expData.map((exp, index) => (
 							<Tab
@@ -112,11 +123,44 @@ const Experience = () => {
 						))}
 					</Tab.Panels>
 				</Tab.Group>
+					 * 
+					 */
+				}
+				<Timeline position="alternate" className="md:w-8/12 bg-red-500 w-11/12 mx-auto">
+					{expData.map((exp, index) => (
+						<TimelineItem key={index}>
+							<TimelineSeparator>
+								<TimelineDot color="grey" variant="filled">
+								</TimelineDot>
+								<TimelineConnector />
+							</TimelineSeparator>
+							<TimelineContent>
+								<div className="rounded-lg h-auto shadow-lg p-4">
+									<div className="flex flex-col px-4 text-left">
+										<p className="text-sm text-light">{exp.period}</p>
+										<h2 className="text-lg text-gray-300">{exp.position}</h2>
+										<div className="my-4">
+											{exp.activities.map((activity, index) => {
+												return (
+													<p key={index} className="text-sm my-2">
+														<span className="text-light">▹</span> <span className="text-gray-300 text-sm">{activity}</span> 
+													</p>
+												);
+											}
+											)}
+										</div>
+									</div>
+								</div>
+							</TimelineContent>
+						</TimelineItem>
+					))}
+				</Timeline>
+
 			</motion.div>
 
 			<div className="flex flex-col md:w-full justify-around md:container w-11/12 mx-auto max-w-screen-sm">
 				<Frontend />
-				<Backend/>
+				<Backend />
 			</div>
 		</div>
 	);
