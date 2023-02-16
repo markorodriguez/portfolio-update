@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Tab } from "@headlessui/react";
 import { FaHospital, FaNodeJs, FaSms } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
@@ -54,12 +54,24 @@ const Experience = () => {
 	// Experience
 	const controls = useAnimation();
 	const { ref, inView } = useInView();
+	const [isMedium, setIsMedium] = useState(false);
 
 	useEffect(() => {
 		if (inView) {
 			controls.start("visible");
 		}
 	}, [controls, inView]);
+
+	window.addEventListener("resize", () => {
+		if (window.innerWidth < 768) {
+			console.log("is medium");
+			setIsMedium(true);
+		}
+		if (window.innerWidth > 768) {
+			console.log("is not medium");
+			setIsMedium(false);
+		}
+	})
 
 
 	return (
@@ -126,7 +138,7 @@ const Experience = () => {
 					 * 
 					 */
 				}
-				<Timeline position="alternate" className="md:w-8/12 bg-red-500 w-11/12 mx-auto">
+				<Timeline position={isMedium ? "right" : "alternate"} className="md:w-8/12 w-full mx-auto">
 					{expData.map((exp, index) => (
 						<TimelineItem key={index}>
 							<TimelineSeparator>
@@ -143,7 +155,7 @@ const Experience = () => {
 											{exp.activities.map((activity, index) => {
 												return (
 													<p key={index} className="text-sm my-2">
-														<span className="text-light">▹</span> <span className="text-gray-300 text-sm">{activity}</span> 
+														<span className="text-light">▹</span> <span className="text-gray-300 text-sm">{activity}</span>
 													</p>
 												);
 											}
