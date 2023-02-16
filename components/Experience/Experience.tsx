@@ -7,12 +7,11 @@ import Frontend from "./Frontend";
 import Backend from "./Backend";
 
 import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-
 
 const expData = [
 	{
@@ -138,7 +137,18 @@ const Experience = () => {
 					 * 
 					 */
 				}
-				<Timeline position={isMedium ? "right" : "alternate"} className="md:w-8/12 w-full mx-auto">
+				<Timeline 
+				
+				sx={{
+					[`& .${timelineItemClasses.positionRight}:before`]: {
+						flex: 0,
+						padding: 0
+					}
+				}}
+
+				
+				
+				position={isMedium ? "right" : "alternate"} className="md:w-10/12 w-full  mx-auto">
 					{expData.map((exp, index) => (
 						<TimelineItem key={index}>
 							<TimelineSeparator>
