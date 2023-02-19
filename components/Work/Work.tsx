@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Image from "next/image";
+import { FaArrowCircleRight, FaArrowUp, FaGithub } from "react-icons/fa";
 
 const expData = [
   {
@@ -89,36 +90,36 @@ const Work = () => {
 
       {expData.map(({ title, tools, github, deployed, image, description }, index) => (
         <div className={`flex my-8 flex-col-reverse w-full mx-auto justify-center items-center  ${index%2 == 0 ? 'md:flex-row' : 'md:flex-row-reverse' } md:w-8/12 relative`}>
-          <div className="bg-light w-6/12">
+          <div className="bg-light md:w-6/12 w-10/12">
             <Image
-              className="opacity-70 w-full h-full hover:cursor-pointer hover:opacity-100 transition-opacity"
+              className="opacity-70 border-2 w-full h-full hover:cursor-pointer hover:opacity-100 transition-opacity"
               src={image}
               width={800}
               height={600}
               alt="poke_image"
             />
           </div>
-          <div className="w-6/12 ">
-            <div className={`h-full mx-auto w-10/12 flex flex-col ${index%2 == 0 ? 'text-right' : 'text-left' } justify-center`}>
-              <h1 className="text-xl font-semibold text-light">{title}</h1>
+          <div className="md:w-6/12 container ">
+            <div className={`h-full mx-auto w-10/12 flex flex-col ${index%2 == 0 ? 'md:text-right text-center' : 'md:text-left text-center' } justify-center`}>
+              <h1 className="text-xl font-semibold text-light underline decoration-gray-300 underline-offset-8 decoration-2">{title}</h1>
               <div className="p-6 my-10 bg-secondary rounded-md hover:shadow-2xl">
                 <p className="text-sm text-gray-300 text-justify">{description}</p>
-                <div className="flex flex-row justify-center">
+                <div className="flex mt-4 flex-row justify-center">
                   <a
                     href={github}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-light text-sm font-semibold hover:underline"
+                    className="text-light text-base font-semibold hover:underline mx-4"
                   >
-                    Github
+                    <FaGithub/>
                   </a>
                   <a
                     href={deployed}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-light text-sm font-semibold hover:underline"
+                    className="text-light text-base font-semibold hover:underline mx-4"
                   >
-                    Deployed
+                    <FaArrowCircleRight />
                   </a>
                 </div>
 
