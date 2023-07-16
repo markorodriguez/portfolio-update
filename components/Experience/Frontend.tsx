@@ -64,7 +64,7 @@ const Frontend = () => {
         <motion.div ref={ref}
             animate={controls}
             variants={variants}
-            initial="hidden" className="md:w-6/12 mx-auto w-full mb-10">
+            initial="hidden" className="md:w-6/12 mx-auto w-full mt-20 mb-10">
             <h2 className="text-xl text-gray-300 mb-12 underline underline-offset-8 decoration-light decoration-4">
                 Frontend
             </h2>

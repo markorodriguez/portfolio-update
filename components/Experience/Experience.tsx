@@ -12,6 +12,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import Cloud from "./Cloud";
 
 const expData = [
 	{
@@ -21,12 +22,14 @@ const expData = [
 		period: "September 2022 - Now",
 		image: <FaSms className="mx-4" />,
 		activities: [
-			"Development utilizing API Gateway and AWS Lambda (Node.js)",
-			"Script and query development for DynamoDB",
-			"Unit testing execution using Jest",
-			"Frontend development using React.JS",
-			"Consumption of services from AWS, AZURE, IBM, and GCP using Python",
-			"API documentation using OpenAPI 3.0 (Swagger)",
+			"Developed Lambdas in NodeJS for AWS API Gateway",
+			"Created scripts and queries for DynamoDB data management",
+			"Implemented unit tests using Jest for code reliability",
+			"Built interfaces with React.JS, Tailwind, Framer Motion, and Redux",
+			"Integrated Python-based Speech to Text services from AWS, Azure, IBM, and GCP",
+			"Documented APIs following OpenAPI 3.0 (Swagger) standards",
+			"Developed Java and Spring applications",
+			"Maintained legacy Struts 2 (Java) applications"
 		],
 	},
 	{
@@ -157,7 +160,7 @@ const Experience = () => {
 								<TimelineConnector />
 							</TimelineSeparator>
 							<TimelineContent>
-								<div className="rounded-lg h-auto shadow-lg p-4">
+								<div className="rounded-lg h-auto bg-slate-700 shadow-lg p-4">
 									<div className="flex flex-col px-4 text-left">
 										<p className="text-sm text-light">{exp.period}</p>
 										<h2 className="text-lg text-gray-300">{exp.position}</h2>
@@ -183,7 +186,8 @@ const Experience = () => {
 			<div className="flex flex-col md:w-full justify-around md:container w-11/12 mx-auto max-w-screen-sm">
 				<Frontend />
 				<Backend />
-			</div>
+				<Cloud />
+				</div>
 		</div>
 	);
 };

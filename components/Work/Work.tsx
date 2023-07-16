@@ -90,7 +90,7 @@ const Work = () => {
 
       {expData.map(({ title, tools, github, deployed, image, description }, index) => (
         <div className={`flex my-8 flex-col-reverse w-full mx-auto justify-center items-center  ${index%2 == 0 ? 'md:flex-row' : 'md:flex-row-reverse' } md:w-8/12 relative`}>
-          <div className="bg-light md:w-6/12 w-10/12">
+          <div className="md:w-6/12 w-10/12">
             <a href={deployed} target="_blank" rel="noreferrer">
             <Image
               className="opacity-70 border-2 w-full h-full hover:cursor-pointer hover:opacity-100 transition-opacity"
