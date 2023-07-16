@@ -28,8 +28,8 @@ const backendTools = [
         svg_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
     },
     {
-        tool: "AWS",
-        svg_url: "https://feedzai.com/aptopees/2022/11/AWS.svg",
+        tool: "Java",
+        svg_url: "https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png",
     },
     {
         tool: "Python",
