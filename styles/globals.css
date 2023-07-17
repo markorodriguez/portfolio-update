@@ -139,3 +139,7 @@ body {
 #tsparticles {
   z-index: -9999;
 }
+
+.image-blob {
+  clip-path: circle(30% at 50% 50%);
+}

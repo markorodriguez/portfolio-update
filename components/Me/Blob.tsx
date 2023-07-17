@@ -10,7 +10,7 @@ const Blob = () => {
         </svg>
       </div>
         
-      <div className='absolute w-40'>
+      <div className='absolute w-60'>
         <Profile  />
       </div>
     </div>
