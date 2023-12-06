@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const backendTools = [
     {
         tool: "AWS",
-        svg_url: "https://mti.com/wp-content/uploads/2021/04/Amazon-Web-Services-Logo-White.png",
+        svg_url: "https://www.sophos.com/sites/default/files/2022-02/aws-logo-white-orange.png",
     },
     {
         tool: "Azure",

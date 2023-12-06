@@ -22,14 +22,14 @@ const expData = [
 		period: "September 2022 - Now",
 		image: <FaSms className="mx-4" />,
 		activities: [
-			"Developed Lambdas in NodeJS for AWS API Gateway",
-			"Created scripts and queries for DynamoDB data management",
-			"Implemented unit tests using Jest for code reliability",
-			"Built interfaces with React.JS, Tailwind, Framer Motion, and Redux",
-			"Integrated Python-based Speech to Text services from AWS, Azure, IBM, and GCP",
+			"Created Lambdas in NodeJS to interface with AWS API Gateway.",
+			"Developed scripts and queries to extract and retrieve data from DynamoDB.",
+			"Implemented unit testing using Jest framework.",
+			"Developed user interfaces using React.JS, Tailwind, FramerMotion, and Redux.",
+			"Utilized Python for Speech To Text processing, consuming cloud services.",
 			"Documented APIs following OpenAPI 3.0 (Swagger) standards",
-			"Developed Java and Spring applications",
-			"Maintained legacy Struts 2 (Java) applications"
+			"Developed application requirements in Java and Spring.",
+			"Maintained legacy applications in Struts 2 (Java)."
 		],
 	},
 	{
@@ -40,8 +40,8 @@ const expData = [
 		image: <FaHospital className="mx-4" />,
 		activities: [
 			"Familiar with REST API development using Node.JS and Express.",
-			"Hands-on experience with backend and frontend implementation.",
-			"Understanding of database creation using SQL.",
+			"Integrated Facebook API to dynamically display the latest posts from the clinic's fan page.",
+			"Designed and deployed an SQL database for data management.",
 		],
 	}
 ];
