@@ -18,7 +18,7 @@ const expData = [
 	{
 		company: "Mowa Consultora",
 		place: "Lima, Peru",
-		position: "Backend Developer Jr",
+		position: "FullStack Developer Jr",
 		period: "September 2022 - Now",
 		image: <FaSms className="mx-4" />,
 		activities: [
