@@ -97,7 +97,7 @@ const NavBar = () => {
             </motion.a>
             <motion.a
               download="Marko_Rodriguez-CV.pdf"
-              href="/documents/Marko_Rodriguez-CV.pdf"
+              href="/documents/Marko_Rodriguez-Resume.pdf"
               initial={{ opacity: 0 }}
               transition={{ duration: 1.85, type: "spring", delay: 0.45 }}
               animate={{ y: 0, opacity: 1 }}
