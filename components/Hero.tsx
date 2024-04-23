@@ -29,7 +29,7 @@ const Hero = () => {
           className="md:w-5/12 w-10/12 text-base md:text-lg text-justify md:text-center  text-gray-300"
         >
           I'm a{" "}
-          <span className="text-light font-semibold">junior software developer</span>{" "}
+          <span className="text-light font-semibold">software developer</span>{" "}
           with a passion for building beautiful and functional websites. I'm
           always eager to learn and{" "}
           <span className="text-light font-semibold">stay up-to-date </span>

@@ -18,18 +18,21 @@ const expData = [
 	{
 		company: "Mowa Consultora",
 		place: "Lima, Peru",
-		position: "FullStack Developer Jr",
+		position: "Backend Developer",
 		period: "September 2022 - Now",
 		image: <FaSms className="mx-4" />,
 		activities: [
-			"Created Lambdas in NodeJS to interface with AWS API Gateway.",
-			"Developed scripts and queries to extract and retrieve data from DynamoDB.",
-			"Implemented unit testing using Jest framework.",
-			"Developed user interfaces using React.JS, Tailwind, FramerMotion, and Redux.",
-			"Utilized Python for Speech To Text processing, consuming cloud services.",
-			"Documented APIs following OpenAPI 3.0 (Swagger) standards",
-			"Developed application requirements in Java and Spring.",
-			"Maintained legacy applications in Struts 2 (Java)."
+			"Implementation of APIs in Serverless for AWS Lambda (NodeJS).",
+			"Creation and management of AWS services (EC2, Api Gateway, Lambda, S3, Cloudwatch, Route 53, Amplify, DynamoDB, and CloudWatch).",
+			"Management of relational databases (PostgreSQL) and non-relational databases (DynamoDB and MongoDB).",
+			"Execution and development of unit tests using Jest.",
+			"Development of interfaces with React.JS, Next.JS, Tailwind, FramerMotion, and Redux (Typescript).",
+			"Consumption of services from AWS, AZURE, IBM, and GCP using Python for Speech To Text processing.",
+			"Documentation of APIs under OpenAPI 3.0 (Swagger).",
+			"Development of requirements for applications in Java and Spring.",
+			"Maintenance of legacy applications in Struts 2 (Java).",
+			"Monitoring of EC2 instances and Azure VMs.",
+			"Automation of tasks using Python."
 		],
 	},
 	{
@@ -39,9 +42,10 @@ const expData = [
 		period: "March 2022 - June 2022",
 		image: <FaHospital className="mx-4" />,
 		activities: [
-			"Familiar with REST API development using Node.JS and Express.",
-			"Integrated Facebook API to dynamically display the latest posts from the clinic's fan page.",
-			"Designed and deployed an SQL database for data management.",
+			"Development of responsive web interfaces using EJS and CSS/SASS.",
+			"Creation of RESTful APIs in NodeJS using ExpressJS.",
+			"Integration and consumption of Facebook API (GraphQL) for updating, synchronizing, and interacting with the fan page.",
+			"Design of relational databases (PostgreSQL)."
 		],
 	}
 ];
@@ -140,18 +144,18 @@ const Experience = () => {
 					 * 
 					 */
 				}
-				<Timeline 
-				
-				sx={{
-					[`& .${timelineItemClasses.positionRight}:before`]: {
-						flex: 0,
-						padding: 0
-					}
-				}}
+				<Timeline
 
-				
-				
-				position={isMedium ? "right" : "alternate"} className="md:w-10/12 w-full  mx-auto">
+					sx={{
+						[`& .${timelineItemClasses.positionRight}:before`]: {
+							flex: 0,
+							padding: 0
+						}
+					}}
+
+
+
+					position={isMedium ? "right" : "alternate"} className="md:w-10/12 w-full  mx-auto">
 					{expData.map((exp, index) => (
 						<TimelineItem key={index}>
 							<TimelineSeparator>
@@ -187,7 +191,7 @@ const Experience = () => {
 				<Frontend />
 				<Backend />
 				<Cloud />
-				</div>
+			</div>
 		</div>
 	);
 };
