@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen h-full bg-primary" id="about" >
-      <div className="md:container  text-center absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center mx-auto w-11/12">
+    <div className="min-h-screen h-full relative bg-primary" id="about" >
+      <div className="md:container absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center  flex flex-col items-center mx-auto w-11/12">
         <motion.h2
           initial={{ y: -10, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.45 }}
@@ -48,10 +48,10 @@ const Hero = () => {
           <Blob />
         </motion.div>
       </div>
-      <div className="md:container mx-auto left-1/2 -translate-x-1/2 absolute bottom-6 w-full">
+      <div className="md:container hidden md:inline mx-auto left-1/2 -translate-x-1/2 absolute bottom-6 w-full">
         <motion.span initial={{ y: 0, opacity: 0 }}
           transition={{ duration: 1.85, type: "spring", delay: 0.65 }}
-          animate={{ y: 0, opacity: 1 }} className="scroll-down mx-auto"></motion.span>
+          animate={{ y: 0, opacity: 1 }} className="scroll-down mx-auto "></motion.span>
       </div>
     </div>
   );

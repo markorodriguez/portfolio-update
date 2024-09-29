@@ -16,10 +16,22 @@ import Cloud from "./Cloud";
 
 const expData = [
 	{
+		company: "Laureate Peru",
+		place: "Lima, Peru",
+		position: "Backend Developer",
+		period: "July 2024 - now",
+		image: <FaHospital className="mx-4" />,
+		activities: [
+			"Implementing caché strategies in AWS Lambda based on FastAPI and DynamoDB.",
+			"Cloudwatch monitoring and logging for AWS services.",
+			"Adding dependencies inyection in FastAPI for better code organization.",
+		],
+	},
+	{
 		company: "Mowa Consultora",
 		place: "Lima, Peru",
 		position: "Backend Developer",
-		period: "September 2022 - Now",
+		period: "September 2022 - June 2024",
 		image: <FaSms className="mx-4" />,
 		activities: [
 			"Implementation of APIs in Serverless for AWS Lambda (NodeJS).",
@@ -33,19 +45,6 @@ const expData = [
 			"Maintenance of legacy applications in Struts 2 (Java).",
 			"Monitoring of EC2 instances and Azure VMs.",
 			"Automation of tasks using Python."
-		],
-	},
-	{
-		company: "Clinica San Andrés",
-		place: "Lima, Peru",
-		position: "Intern Developer",
-		period: "March 2022 - June 2022",
-		image: <FaHospital className="mx-4" />,
-		activities: [
-			"Development of responsive web interfaces using EJS and CSS/SASS.",
-			"Creation of RESTful APIs in NodeJS using ExpressJS.",
-			"Integration and consumption of Facebook API (GraphQL) for updating, synchronizing, and interacting with the fan page.",
-			"Design of relational databases (PostgreSQL)."
 		],
 	}
 ];

@@ -46,7 +46,7 @@ const expData = [
     deployed: "https://next-countries-5t7u14k20-markorodriguez.vercel.app/",
     image: "/images/countries.png",
     description: "The Next Countries API is a simple and clean web app that displays the countries of the world. Built with Next.js, Tailwind, and Countries API."
-  },
+  }
 ];
 
 const variants = {
@@ -132,6 +132,7 @@ const Work = () => {
 
         </div>
       ))}
+
     </div>
   );
 };
