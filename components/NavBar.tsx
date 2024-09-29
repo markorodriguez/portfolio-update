@@ -28,7 +28,7 @@ const NavBar = () => {
       <AnimatePresence>
         {burgerOpen && <SideBar onClose={handleClickOutside} />}
       </AnimatePresence>
-      <div className={`w-screen fixed z-10 h-20 transition-all ${scroll ? 'bg-primary' : 'bg-transparent'} `}>
+      <div className={`w-screen fixed z-10 h-16 transition-all ${scroll ? 'bg-primary' : 'bg-transparent'} `}>
         <nav className={`md:container  mont-font  px-4 w-11/12 mx-auto py-4 font-medium text-white text-sm flex justify-between md:items-center `}>
           <motion.span
             initial={{ y: -10, opacity: 0 }}
@@ -203,7 +203,7 @@ const SideBar = ({ onClose }: ISideBar) => {
             initial={{ opacity: 1 }}
             transition={{ duration: 1.85, type: "spring", delay: 0.45 }}
             animate={{ x: 0, opacity: 1 }}
-            className=" border-light text-light border-2 py-2 px-4 rounded-md hover:text-gray-300 hover:bg-light transition-all"
+            className="border-light text-light border-2 py-2 px-4 rounded-md hover:text-gray-300 hover:bg-light transition-all"
           >
             Resume
           </motion.a>
