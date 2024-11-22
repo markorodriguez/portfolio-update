@@ -167,7 +167,7 @@ const Experience = () => {
 								<div className="rounded-lg h-auto bg-slate-700 shadow-lg p-4">
 									<div className="flex flex-col px-4 text-left">
 										<p className="text-sm text-light">{exp.period}</p>
-										<h2 className="text-lg text-gray-300">{exp.position}</h2>
+										<h2 className="text-lg text-gray-300">{exp.position} - <span className="font-bold">{exp.company}</span></h2>
 										<div className="my-4">
 											{exp.activities.map((activity, index) => {
 												return (
